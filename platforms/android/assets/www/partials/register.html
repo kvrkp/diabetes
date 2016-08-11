@@ -1,0 +1,71 @@
+<div class="register">
+	<div class="margintop marginleft">
+		<div class="row">
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<a href="#/home">Home</a>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">Register yourself</div>
+		</div>
+		<div class="row margintop">
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<span class="label label-default">Name</span>
+			</div>
+			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<input type="text" class="form-control" id="name" ng-model="User.name"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<span class="label label-default">Date of Birth</span>
+			</div>
+			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<input type="text" class="form-control" id="dob" ng-model="User.dob"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<span class="label label-default">Blood Group</span>
+			</div>
+			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<input type="text" class="form-control" id="bloodgroup" ng-model="User.bloodgroup"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<span class="label label-default">Sex</span>
+			</div>
+			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<input type="text" class="form-control" id="sex" ng-model="User.sex"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<span class="label label-default">Weight</span>
+			</div>
+			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<input type="text" class="form-control" id="weight" ng-model="User.weight"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<span class="label label-default">Height</span>
+			</div>
+			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<input type="text" class="form-control" id="height" ng-model="User.height"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<span class="label label-default">Type</span>
+			</div>
+			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<input type="text" class="form-control" id="diabetesType" ng-model="User.diabetesType"/>
+			</div>
+		</div>
+		<div class="row margintop">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<button type="button" class="btn btn-default" ng-click="register()">Register</button>
+				<button type="button" class="btn btn-default" ng-click="clear()">Clear</button>
+			</div>
+		</div>
+	</div>
