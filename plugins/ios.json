@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.diabetes"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.diabetes"
         }
     },
     "dependent_plugins": {}
