@@ -35,6 +35,12 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         console.log("device is ready");
+        
+        var domElement = document.getElementById("diabetesAppId");
+        angular.bootstrap(domElement, ["diabetesApp"]);
+        
+        console.log("angularjs bootstrapped");
+        
         var db = window.sqlitePlugin.openDatabase({name: 'demo.db', location: 'default'});
        
         console.log("demo.db opened");
