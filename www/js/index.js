@@ -40,33 +40,9 @@ var app = {
         angular.bootstrap(domElement, ["diabetesApp"]);
         
         console.log("angularjs bootstrapped");
-        
-        var db = window.sqlitePlugin.openDatabase({name: 'demo.db', location: 'default'});
-       
-        console.log("demo.db opened");
-        
-        db.transaction(function(tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS DemoTable (name, score)');
-            tx.executeSql('INSERT INTO DemoTable VALUES (?,?)', ['Alice', 101]);
-            tx.executeSql('INSERT INTO DemoTable VALUES (?,?)', ['Betty', 202]);
-          }, function(error) {
-            console.log('Transaction ERROR: ' + error.message);
-          }, function() {
-            console.log('Populated database OK');
-          });
-        
-        db.transaction(function(tx) {
-            tx.executeSql('SELECT count(*) AS mycount FROM DemoTable', [], function(tx, rs) {
-              console.log('Record count (expected to be 2): ' + rs.rows.item(0).mycount);
-            }, function(tx, error) {
-              console.log('SELECT error: ' + error.message);
-            });
-          });
-        
         console.log("Checking for camera");
         console.log(navigator.camera);
-        
-    },
+   },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
