@@ -28,8 +28,8 @@ diabetesControllers.controller('registerCtrl', [ '$scope', 'User', function($sco
 		console.log("registered:" + User.name);
 	    var db = window.sqlitePlugin.openDatabase({name: 'diabetes.db', location: 'default'});
         db.transaction(function(tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS DiabetesTable (name, dob, bloodgroup, sex, weight, height, diabetesType, email)');
-            tx.executeSql("DELETE FROM DiabetesTable");
+        	tx.executeSql('DROP TABLE DiabetesTable');
+            tx.executeSql('CREATE TABLE DiabetesTable (name, dob, bloodgroup, sex, weight, height, diabetesType, email)');
             tx.executeSql('INSERT INTO DiabetesTable (name, dob, bloodgroup, sex, weight, height, diabetesType, email) VALUES (?,?,?,?,?,?,?,?)', [User.name, User.dob, User.bloodgroup, User.sex, User.height, User.weight, User.diabetesType, User.email]);
           }, function(error) {
             console.log('Transaction ERROR: ' + error.message);
@@ -37,9 +37,7 @@ diabetesControllers.controller('registerCtrl', [ '$scope', 'User', function($sco
             console.log('Populated database OK');
             db.close();
           });
-        
-
-	}
+  	}
 
 	$scope.clear = function() {
 		console.log("cleared");
